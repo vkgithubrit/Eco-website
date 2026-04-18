@@ -68,7 +68,7 @@ const Profile: React.FC = () => {
 
               <div className="flex items-center gap-3">
                 <Phone className="text-indigo-600 h-5 w-5" />
-                <span>+91 9876543210</span>
+                <span>+91 XXXXXXXXXX</span>
               </div>
 
               <div className="flex items-center gap-3">
