@@ -7,6 +7,7 @@ import {
   Menu,
   X,
   Store,
+  UserCircle,
 } from "lucide-react";
 import { useAuthStore } from "../store/authStore";
 import { useCartStore } from "../store/cartStore";
@@ -79,10 +80,26 @@ const Navbar: React.FC = () => {
 
             {isAuthenticated ? (
               <div className="flex items-center gap-4">
-                <span className="text-sm text-gray-600">
-                  Hi, {user?.name || "User"}
-                </span>
 
+                {/* Profile Button */}
+                <button
+                  onClick={() => navigate("/profile")}
+                  className="flex items-center gap-2 hover:bg-gray-100 px-3 py-2 rounded-xl transition"
+                >
+                  <UserCircle className="h-8 w-8 text-indigo-600" />
+
+                  <div className="text-left hidden lg:block">
+                    <p className="text-xs text-gray-400">
+                      My Profile
+                    </p>
+
+                    <p className="text-sm text-gray-700 max-w-45 truncate">
+                      {user?.email}
+                    </p>
+                  </div>
+                </button>
+
+                {/* Logout */}
                 <button
                   onClick={handleLogout}
                   className="flex items-center gap-2 bg-red-50 text-red-600 px-4 py-2 rounded-lg hover:bg-red-100 transition"
@@ -90,6 +107,7 @@ const Navbar: React.FC = () => {
                   <LogOut className="h-4 w-4" />
                   Logout
                 </button>
+
               </div>
             ) : (
               <Link
@@ -147,9 +165,16 @@ const Navbar: React.FC = () => {
 
           {isAuthenticated ? (
             <>
-              <p className="text-sm text-gray-500">
-                Hi, {user?.name || "User"}
-              </p>
+              <button
+                onClick={() => {
+                  navigate("/profile");
+                  closeMenu();
+                }}
+                className="w-full flex items-center gap-2 text-left px-3 py-2 rounded-lg hover:bg-gray-100"
+              >
+                <UserCircle className="h-6 w-6 text-indigo-600" />
+                Profile
+              </button>
 
               <button
                 onClick={handleLogout}
