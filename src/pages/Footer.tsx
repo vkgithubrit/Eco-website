@@ -7,7 +7,7 @@ const Footer = () => {
         {/* Brand */}
         <div>
           <h2 className="text-2xl font-bold text-indigo-400">
-            Vivek Store
+            VivekStore
           </h2>
           <p className="text-gray-400 mt-3 text-sm">
             Your trusted shopping destination for quality products and best prices.
@@ -44,7 +44,7 @@ const Footer = () => {
             Contact
           </h3>
           <p className="text-gray-400 text-sm">
-            Email: vivekkumar090902example.com
+            Email: vivekkumar090902@gmail.com
           </p>
           <p className="text-gray-400 text-sm">
             Phone: +91 88732XXXXX
