@@ -50,7 +50,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       </Link>
 
       {/* Product Details */}
-      <div className="p-5 flex flex-col flex-grow border-t border-gray-50">
+      <div className="p-5 flex flex-col grow border-t border-gray-50">
         <span className="text-xs font-medium text-indigo-500 uppercase tracking-wider mb-2">
           {product.category}
         </span>
