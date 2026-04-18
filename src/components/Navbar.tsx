@@ -49,7 +49,7 @@ const Navbar: React.FC = () => {
             </div>
 
             <span className="text-xl font-bold text-gray-800">
-              TechStore
+              VivekStore
             </span>
           </Link>
 

@@ -44,10 +44,10 @@ const Footer = () => {
             Contact
           </h3>
           <p className="text-gray-400 text-sm">
-            Email: vivek@example.com
+            Email: vivekkumar090902example.com
           </p>
           <p className="text-gray-400 text-sm">
-            Phone: +91 9876543210
+            Phone: +91 88732XXXXX
           </p>
           <p className="text-gray-400 text-sm">
             India
