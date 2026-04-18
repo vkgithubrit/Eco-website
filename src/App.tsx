@@ -10,6 +10,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Loader2 } from "lucide-react";
 import Navbar from "./components/Navbar";
 import { useAuthStore } from "./store/authStore";
+import Footer from "./pages/Footer";
 
 const Home = lazy(() => import("./pages/Home"));
 const Login = lazy(() => import("./pages/Login"));
@@ -101,7 +102,7 @@ const App: React.FC = () => {
     <Router>
       <div className="min-h-screen flex flex-col bg-gray-50">
         <Navbar />
-        <main className="flex-grow">
+        <main className="grow">
           <Suspense
             fallback={
               <div className="min-h-[calc(100vh-4rem)] flex flex-col items-center justify-center bg-gray-50">
@@ -113,9 +114,7 @@ const App: React.FC = () => {
             <AnimatedRoutes />
           </Suspense>
         </main>
-        <footer className="py-4 text-center text-sm text-gray-500 bg-white border-t border-gray-200">
-          This project is made by @Sjx Apr,2026
-        </footer>
+        <Footer/>
       </div>
     </Router>
   );
